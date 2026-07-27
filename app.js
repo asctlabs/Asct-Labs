@@ -16,25 +16,6 @@
 
 
 
-  const scrollWheel = document.querySelector('.scroll-wheel');
-  const siteShell = document.querySelector('.site-shell');
-  if (scrollWheel && siteShell) {
-    let wheelCloseTimeout;
-    const openWheelNav = () => {
-      window.clearTimeout(wheelCloseTimeout);
-      siteShell.classList.add('is-wheel-open');
-    };
-    const closeWheelNav = () => {
-      window.clearTimeout(wheelCloseTimeout);
-      wheelCloseTimeout = window.setTimeout(() => siteShell.classList.remove('is-wheel-open'), 200);
-    };
-    scrollWheel.addEventListener('mouseenter', openWheelNav);
-    scrollWheel.addEventListener('mouseleave', closeWheelNav);
-    scrollWheel.addEventListener('focusin', openWheelNav);
-    scrollWheel.addEventListener('focusout', (event) => {
-      if (!scrollWheel.contains(event.relatedTarget)) closeWheelNav();
-    });
-  }
   const menuButton = document.querySelector('[data-menu-toggle]');
   const mainNav = document.querySelector('.main-nav');
   if (menuButton && mainNav) {

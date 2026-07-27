@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,49 +8,87 @@
   <meta name="description" content="Choose between ASCTLABS pricing tiers and move into your custom project setup." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+  <link
+    href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=cabinet-grotesk@400,500,700,800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body data-page="pricing">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell compact-shell">
-    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><span class="theme-toggle__dot"></span></button>
+    
     <header class="topbar topbar--static">
-      <a href="index.html" class="brand"><img class="brand__logo brand__logo--dark" src="assets/asctoz-logo-dark.png" alt="" /><img class="brand__logo brand__logo--light" src="assets/asctoz-logo-light.png" alt="" /><span>ASCTLABS</span></a>
+      <a href="index.html" class="brand"><img class="brand__logo brand__logo--dark" src="assets/asctoz-logo-dark.png"
+          alt="" /><img class="brand__logo brand__logo--light" src="assets/asctoz-logo-light.png"
+          alt="" /><span>ASCTLABS</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" data-menu-toggle>
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<nav class="main-nav" id="mainNav" aria-label="Primary navigation">
-  <a href="#why-us">Why us</a>
-  <a href="#how-it-works">How it works</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="#footer">Contact</a>
-</nav>
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+        <a href="#why-us">Why us</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><span
+        class="theme-toggle__dot"></span></button>
+        
     </header>
     <main id="main" class="section page-intro">
       <div class="container">
         <div class="section-heading reveal is-visible">
-          <p class="eyebrow">Pricing</p>
-          <h1>Pick a starting plan.</h1>
-          <p>Placeholder tiers for now, designed to match the main brand experience and flow into customization.</p>
-        </div>
-        <section class="pricing-grid">
-          <article class="pricing-card reveal is-visible">
-            <p class="pricing-card__label">Option A</p>
-            <h2>Starter</h2>
-            <div class="price">â‚¹9,999</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minimal launch package for quick starts.</p>
-            <a class="btn btn--primary" href="customize.html?plan=A">Choose plan</a>
-          </article>
-        </section>
+  <p class="eyebrow">Simple Pricing</p>
+  <h1>Everything you need. One transparent price.</h1>
+  <p class="section-description">
+    Get a professionally developed website tailored to your business.
+    No hidden fees, no complicated pricing tiers—just one complete package.
+  </p>
+</div>
+
+<section class="pricing-grid pricing-grid--single">
+  <article class="pricing-card pricing-card--featured reveal is-visible">
+
+    <span class="pricing-card__badge">🔥 Limited Time Offer</span>
+
+    <h2>Professional Website Package</h2>
+
+    <div class="price">
+      <span class="old-price"><s>$59.99</s></span>
+      <span class="current-price">$49.99</span>
+    </div>
+
+    <p class="pricing-subtitle">
+      A complete custom website designed and built for your business.
+    </p>
+
+    <ul class="pricing-features">
+      <li>✓ Modern & responsive design</li>
+      <li>✓ Mobile, tablet & desktop optimized</li>
+      <li>✓ Fast loading performance</li>
+      <li>✓ SEO-friendly structure</li>
+      <li>✓ Professional UI & animations</li>
+      <li>✓ Customizable to your brand</li>
+    </ul>
+
+    <a class="btn btn--primary btn--large" href="contact.html">
+      Get Started
+    </a>
+
+    <p class="pricing-note">
+      One-time payment • No monthly subscription
+    </p>
+
+  </article>
+</section>
       </div>
     </main>
   </div>
   <script src="theme.js"></script>
-  <script>
+  <!-- <script>
   (() => {
     const btn = document.querySelector('[data-menu-toggle]');
     const nav = document.getElementById('mainNav');
@@ -77,8 +116,67 @@
       if (window.innerWidth > 768) closeMenu();
     });
   })();
-</script>
+</script> -->
+<style>
+  .pricing-grid--single{
+    display:flex;
+    justify-content:center;
+    margin-top:4rem;
+}
+
+.pricing-card--featured{
+    max-width:520px;
+    width:100%;
+    text-align:center;
+}
+.price{
+    margin:2rem 0;
+}
+
+.old-price{
+    color:#999;
+    font-size:1.2rem;
+    margin-right:.5rem;
+}
+
+.current-price{
+    font-size:3.2rem;
+    font-weight:800;
+    color:var(--accent);
+}
+.pricing-features{
+    list-style:none;
+    padding:0;
+    margin:2rem 0;
+    text-align:left;
+}
+
+.pricing-features li{
+    padding:.8rem 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+.pricing-card__badge{
+    display:inline-block;
+    background:linear-gradient(90deg,#ff8a00,#ffb300);
+    color:#111;
+    padding:.45rem 1rem;
+    border-radius:999px;
+    font-size:.8rem;
+    font-weight:700;
+    margin-bottom:1.5rem;
+}
+.btn--large{
+    width:100%;
+    padding:1rem;
+    font-size:1.05rem;
+    margin-top:1rem;
+}
+.pricing-note{
+    margin-top:1.25rem;
+    font-size:.9rem;
+    opacity:.7;
+}
+</style>
 </body>
+
 </html>
-
-

@@ -8,7 +8,7 @@
       return null;
     }
   })();
-  let theme = stored === 'dark' ? 'dark' : 'light';
+  let theme = stored === 'light' ? 'light' : 'dark';
   root.setAttribute('data-theme', theme);
 
   const persistTheme = () => {

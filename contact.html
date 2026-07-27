@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started • ASCTLABS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="contact">
+
+<div class="site-shell compact-shell">
+
+<header class="topbar topbar--static">
+  <a href="index.html" class="brand">
+    <img class="brand__logo brand__logo--dark" src="assets/asctoz-logo-dark.png" alt="">
+    <img class="brand__logo brand__logo--light" src="assets/asctoz-logo-light.png" alt="">
+    <span>ASCTLABS</span>
+  </a>
+</header>
+
+<main class="section page-intro">
+
+<div class="container">
+
+<div class="section-heading reveal is-visible">
+    <p class="eyebrow">Get Started</p>
+
+    <h1>Let's build something exceptional.</h1>
+
+    <p class="section-description">
+        Ready to bring your idea online? Reach out using any of the methods
+        below and we'll get back to you as soon as possible.
+    </p>
+</div>
+
+<div class="contact-card reveal is-visible">
+
+    <div class="contact-item">
+        <div class="contact-icon">📧</div>
+
+        <div>
+            <h3>Email</h3>
+            <p>hello@asctlabs.com</p>
+            <a href="mailto:hello@asctlabs.com">Send an Email</a>
+        </div>
+    </div>
+
+    <div class="contact-item">
+        <div class="contact-icon">💬</div>
+
+        <div>
+            <h3>WhatsApp</h3>
+            <p>+1 (555) 123-4567</p>
+            <a href="https://wa.me/15551234567">Start Chat</a>
+        </div>
+    </div>
+
+    <div class="contact-item">
+        <div class="contact-icon">📷</div>
+
+        <div>
+            <h3>Instagram</h3>
+            <p>@asctlabs</p>
+            <a href="https://instagram.com/asctlabs">Visit Profile</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="contact-footer reveal is-visible">
+    We usually respond within <strong>24 hours.</strong>
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="theme.js"></script>
+<style>
+    .contact-card{
+    max-width:760px;
+    margin:4rem auto 0;
+
+    background:var(--surface);
+    border:1px solid var(--border-color);
+
+    border-radius:28px;
+
+    padding:1.25rem;
+
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+
+.contact-item{
+
+    display:flex;
+    align-items:center;
+
+    gap:1.5rem;
+
+    padding:1.5rem;
+
+    border-radius:18px;
+
+    transition:.25s;
+}
+
+.contact-item:hover{
+
+    background:rgba(255,255,255,.04);
+
+    transform:translateY(-2px);
+}
+
+.contact-icon{
+
+    width:64px;
+    height:64px;
+
+    border-radius:18px;
+
+    display:grid;
+    place-items:center;
+
+    font-size:1.5rem;
+
+    background:rgba(255,255,255,.06);
+
+    flex-shrink:0;
+}
+
+.contact-item h3{
+
+    margin:0;
+
+    font-size:1.15rem;
+}
+
+.contact-item p{
+
+    margin:.35rem 0;
+
+    opacity:.7;
+}
+
+.contact-item a{
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    color:var(--accent);
+}
+
+.contact-footer{
+
+    text-align:center;
+
+    margin-top:2rem;
+
+    opacity:.7;
+}
+
+@media (max-width:700px){
+
+.contact-item{
+
+    flex-direction:column;
+
+    text-align:center;
+}
+
+}
+</style>
+</body>
+</html>

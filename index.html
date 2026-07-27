@@ -19,21 +19,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="site-shell">
-    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
-      <span class="theme-toggle__dot"></span>
-    </button>
-
-    <aside class="scroll-wheel" aria-label="Section navigation">
-      <button class="scroll-wheel__trigger" type="button" aria-label="Open section navigation">
-        <span></span>
-      </button>
-      <nav class="option-wheel-nav">
-        <a href="#hero">Home</a>
-        <a href="#why-us">Why us</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#footer">Contact</a>
-      </nav>
-    </aside>
+    
 
     <header class="topbar">
       <a href="index.html" class="brand" aria-label="ASCTLABS home">
@@ -45,8 +31,11 @@
         <a href="#why-us">Why us</a>
         <a href="#how-it-works">How it works</a>
         <a href="pricing.html">Pricing</a>
-        <a href="#footer">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <button class="theme-toggle" data-theme-toggle>
+        <span class="theme-toggle__dot"></span>
+    </button>
     </header>
 
     <main id="main">
@@ -185,7 +174,7 @@
           return null;
         }
       })();
-      let theme = stored === 'dark' ? 'dark' : 'light';
+      let theme = stored === 'light' ? 'light' : 'dark';
       root.setAttribute('data-theme', theme);
 
       const persistTheme = () => {
@@ -264,7 +253,7 @@
           { autoAlpha: 0, xPercent: 10, yPercent: 4, rotateX: 10, scale: 0.96 },
           { autoAlpha: 1, xPercent: 0, yPercent: 0, rotateX: 0, scale: 1, duration: 0.75, ease: 'power3.out' },
           0.08
-        );
+        ); 
         tl.set(currentPanel, { zIndex: 1 });
         tl.set(nextPanel, { zIndex: 3 });
       };
