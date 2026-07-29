@@ -1,89 +1,285 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASCTLABS</title>
+  <meta name="description" content="ASCTLABS builds modern, conversion-focused digital experiences with sleek design, smooth interaction, and scalable custom workflows." />
+  <meta name="theme-color" content="#f7f6f2" />
+  <meta property="og:title" content="ASCTLABS” Modern Web Experiences" />
+  <meta property="og:description" content="Sleek, SEO-friendly, clean visuals, and smooth product flows." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.16.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.16.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.16.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <div class="site-shell">
+    
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <header class="topbar">
+      <a href="index.html" class="brand" aria-label="ASCTLABS home">
+        <img class="brand__logo brand__logo--dark" src="assets/asctoz-logo-dark.png" alt="" /><img class="brand__logo brand__logo--light" src="assets/asctoz-logo-light.png" alt="" />
+        <span>ASCTLABS</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainNav" data-menu-toggle><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+        <a href="#why-us">Why us</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle>
+        <span class="theme-toggle__dot"></span>
+    </button>
+    </header>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <main id="main">
+      <section class="hero section" id="hero">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <p class="eyebrow">Design-led digital systems</p>
+            <h1>ASCTLABS creates sleek websites that feel premium from the first scroll.</h1>
+            <p class="hero__lead">We blend clean visuals, conversion-focused structure, and interactive storytelling into a modern experience that looks sharp in light or dark mode.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="pricing.html">View pricings</a>
+              <a class="btn btn--ghost" href="#why-us">Explore more</a>
+            </div>
+            <ul class="hero__meta" role="list">
+              <li>Fast structure</li>
+              <li>Modern interaction</li>
+              <li>SEO-ready foundation</li>
+            </ul>
+          </div>
 
+          <div class="hero__visual reveal">
+            <div class="hero-glow"></div>
+            <div class="cardswap-stage" aria-hidden="true">
+              <div class="cardswap-backdrop cardswap-backdrop--one"></div>
+              <div class="cardswap-backdrop cardswap-backdrop--two"></div>
+              <div class="card-swap-viewer" id="cardSwapViewer">
+                <article class="swap-panel is-active stack-card stack-card--primary">
+                  <span class="stack-card__tag">Strategy</span>
+                  <h3>Position your brand with clear hierarchy.</h3>
+                  <p>Sharper messaging, cleaner layouts, and structure that guides attention naturally.</p>
+                </article>
+                <article class="swap-panel stack-card">
+                  <span class="stack-card__tag">Experience</span>
+                  <h3>Design interactions that feel smooth.</h3>
+                  <p>Micro-animations, layered depth, and polished sections that hold visual rhythm.</p>
+                </article>
+                <article class="swap-panel stack-card">
+                  <span class="stack-card__tag">Delivery</span>
+                  <h3>Launch with scalable page flows.</h3>
+                  <p>Pricing, customization, and checkout-ready steps designed to feel cohesive.</p>
+                </article>
+              </div>
+              <div class="swap-dots" id="swapDots">
+                <button class="swap-dots__dot is-active" type="button" aria-label="Show card 1"></button>
+                <button class="swap-dots__dot" type="button" aria-label="Show card 2"></button>
+                <button class="swap-dots__dot" type="button" aria-label="Show card 3"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why-us">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Why ASCTLABS</p>
+            <h2>Built for brands that want clean design without losing clarity.</h2>
+            <p>Every section is structured to feel spacious, modern, and useful instead of noisy or template-like.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <span class="feature-card__index">01</span>
+              <h3>Modern by default</h3>
+              <p>Soft contrast, strong typography, disciplined spacing, and subtle depth make the interface feel premium.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-card__index">02</span>
+              <h3>Conversion aware</h3>
+              <p>Calls to action, pricing paths, and next steps are placed where users naturally expect them.</p>
+            </article>
+            <article class="feature-card reveal">
+              <span class="feature-card__index">03</span>
+              <h3>Flexible structure</h3>
+              <p>Sections, plans, and checkout-style pages are easy to expand when real content and integrations are added.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="container process-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">How it works</p>
+            <h2>A smooth three-step flow from pricing to payment.</h2>
+            <p>The user journey stays simple, visually consistent, and easy to scale into a real production funnel later.</p>
+          </div>
+          <div class="process-list">
+            <article class="process-card reveal">
+              <span>Step 1</span>
+              <h3>Choose a plan</h3>
+              <p>Start from a clean pricing page with three plan tiers and clear action buttons.</p>
+            </article>
+            <article class="process-card reveal">
+              <span>Step 2</span>
+              <h3>Customize details</h3>
+              <p>Select project preferences, features, and support style before moving to review.</p>
+            </article>
+            <article class="process-card reveal">
+              <span>Step 3</span>
+              <h3>Review and pay</h3>
+              <p>See the chosen plan, subtotal, and payment options for Razorpay or PayPal.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section" id="footer">
+      <div class="container footer__grid">
+        <div>
+          <p class="eyebrow">ASCTLABS</p>
+          <h2>Clean systems. Better presence.</h2>
+        </div>
+        <div class="footer__links">
+          <a href="https://instagram.com/asctlabs" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://github.com/asctlabs" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <div class="footer__links">
+          <a href="tos.html">TOS</a>
+          <a href="mailto:asctlabs@gmail.com">Contact</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+          const stored = (() => {
         try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+          return localStorage.getItem('asctlabs-theme');
         } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+          return null;
         }
+      })();
+      let theme = stored === 'light' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+
+      const persistTheme = () => {
+        try {
+          localStorage.setItem('asctlabs-theme', theme);
+        } catch (e) {}
+      };
+
+
+      const syncIcon = () => {
+        root.setAttribute('data-theme', theme);
+        toggle?.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        persistTheme();
+      };
+
+      syncIcon();
+      toggle?.addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        syncIcon();
       });
-    </script>
-  </body>
+    })();
+
+    (() => {
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.16 });
+      revealEls.forEach(el => observer.observe(el));
+    })();
+
+    (() => {
+      const viewer = document.getElementById('cardSwapViewer');
+      const dotsWrap = document.getElementById('swapDots');
+      if (!viewer || !window.gsap) return;
+      const panels = Array.from(viewer.querySelectorAll('.swap-panel'));
+      const dots = Array.from(dotsWrap.querySelectorAll('.swap-dots__dot'));
+      let active = 0;
+      let intervalId;
+      let animating = false;
+
+      panels.forEach((panel, index) => {
+        gsap.set(panel, {
+          autoAlpha: index === 0 ? 1 : 0,
+          xPercent: index === 0 ? 0 : 8,
+          yPercent: index === 0 ? 0 : 4,
+          rotateX: index === 0 ? 0 : 8,
+          scale: index === 0 ? 1 : 0.96,
+          zIndex: index === 0 ? 3 : 1
+        });
+      });
+
+      const setDotState = next => {
+        dots.forEach((dot, index) => dot.classList.toggle('is-active', index === next));
+      };
+
+      const showPanel = next => {
+        if (animating || next === active) return;
+        animating = true;
+        const currentPanel = panels[active];
+        const nextPanel = panels[next];
+        setDotState(next);
+        const tl = gsap.timeline({ onComplete: () => { active = next; animating = false; } });
+        tl.set(nextPanel, { zIndex: 4, autoAlpha: 1 });
+        tl.to(currentPanel, {
+          autoAlpha: 0,
+          xPercent: -10,
+          yPercent: 6,
+          rotateX: -10,
+          scale: 0.94,
+          duration: 0.55,
+          ease: 'power2.inOut'
+        }, 0);
+        tl.fromTo(nextPanel,
+          { autoAlpha: 0, xPercent: 10, yPercent: 4, rotateX: 10, scale: 0.96 },
+          { autoAlpha: 1, xPercent: 0, yPercent: 0, rotateX: 0, scale: 1, duration: 0.75, ease: 'power3.out' },
+          0.08
+        ); 
+        tl.set(currentPanel, { zIndex: 1 });
+        tl.set(nextPanel, { zIndex: 3 });
+      };
+
+      const queueNext = () => showPanel((active + 1) % panels.length);
+      const startAuto = () => intervalId = window.setInterval(queueNext, 3600);
+      const stopAuto = () => window.clearInterval(intervalId);
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          stopAuto();
+          showPanel(index);
+          startAuto();
+        });
+      });
+
+      viewer.addEventListener('mouseenter', stopAuto);
+      viewer.addEventListener('mouseleave', startAuto);
+      startAuto();
+    })();
+  </script>
+  <script src="app.js" defer></script>
+</body>
 </html>
+
+
+
+
+
