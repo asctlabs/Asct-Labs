@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asct-labs.web.app/sitemap.xml
